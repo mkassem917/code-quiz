@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class='container'>
+
+        <!-- Main Button Layout -->
+        <div id='startquiz'>
+            <h1>This quiz will test your skills on various web and coding concepts</h1>
+            <button id='startbtn'>Start Quiz</button>
+            <button id='homePageHighscore' onclick="highScore()">Check High Scores</button>
+        </div>
+
+        <!--Answer Button Layout-->
+        <div id='quiz'>
+            <div id='timer'>Time elasped</div>
+            <div id='questions'>
+                <p>Questions</p>
+            </div>
+            <br>
+            <hr>
+            <button id='a' onclick="Answer('a')">A</button>
+            <button id='b' onclick="Answer('b')">B</button>
+            <button id='c' onclick="Answer('c')">C</button>
+            <button id='d' onclick="Answer('d')">D</button>
+            <div id='result'></div>
+        </div>
+        <br>
+        <!--Name Input Field  & Submit Score Button-->
+        <div id="gameOver">
+            <div id="finalScore"></div>
+            <input type="text" size="50" placeholder="Enter your name for high scores" name="name" id="name" />
+            <button id="submitScore">Submit Score</button>
+        </div>
+
+        <div id="highScoreContainer">
+            <div id="highScorePage">
+                <div id="highScoreHeader">
+                    <h3>Name</h3>
+                    <h3>Score</h3>
+                </div>
+
+                <div id="highScoreName"></div>
+                <div id="highScore-Score"></div>
+            </div>
+
+            <!--End Game Buttons-->
+            <div id="endButtons">
+                <button id="playAgain" onclick="replayQuiz()">Play Again</button>
+                <button id="clearHighScore" onclick="clearScore()">Clear Scores</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
